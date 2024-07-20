@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "mono:pixelsize=12:antialias=true:autohint=true";
+static char *font = { "FiraCode Nerd Font:style=Bold" };
 static char *font2[] = { "NotoColorEmoji:pixelsize=10:antialias=true:autohint=true" };
 static int borderpx = 2;
 
@@ -107,35 +107,38 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.8;
-float alphaOffset = 1.0;
+float alpha = 1.0;
+float alphaOffset = 0.0;
 float alphaUnfocus;
 
+// NORD
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
     "#3b4252", /* black   */
-	"#bf616a", /* red     */
-	"#a3be8c", /* green   */
-	"#ebcb8b", /* yellow  */
-	"#81a1c1", /* blue    */
-	"#b48ead", /* magenta */
-	"#88c0d0", /* cyan    */
-	"#e5e9f0", /* white   */
+    "#bf616a", /* red     */
+    "#a3be8c", /* green   */
+    "#ebcb8b", /* yellow  */
+    "#81a1c1", /* blue    */
+    "#b48ead", /* magenta */
+    "#88c0d0", /* cyan    */
+    "#e5e9f0", /* white   */
     "#4c566a", /* black   */
-	"#bf616a", /* red     */
-	"#a3be8c", /* green   */
-	"#ebcb8b", /* yellow  */
-	"#81a1c1", /* blue    */
-	"#b48ead", /* magenta */
-	"#8fbcbb", /* cyan    */
-	"#eceff4", /* white   */
-	[255] = 0,
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#add8e6", /* 256 -> cursor */
-	"#555555", /* 257 -> rev cursor*/
-	"#2e3440", /* default background colour */
-	"#d8dee9", /* default foreground colour */
+    "#bf616a", /* red     */
+    "#a3be8c", /* green   */
+    "#ebcb8b", /* yellow  */
+    "#81a1c1", /* blue    */
+    "#b48ead", /* magenta */
+    "#8fbcbb", /* cyan    */
+    "#eceff4", /* white   */
+    [255] = 0,
+    /* more colors can be added after 255 to use with DefaultXX */
+    "#add8e6", /* 256 -> cursor */
+    "#555555", /* 257 -> rev cursor*/
+    "#2e3440", /* default background colour */
+    "#d8dee9", /* default foreground colour */
 };
+
+
 /*
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
